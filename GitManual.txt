@@ -1,0 +1,88 @@
+2. git 사용자 설정 (git 설치후 최초 한번만 설정하면 된다)
+
+>git config --global user.name "사용자이름"
+>git config --global user.email "이메일 주소"
+3. local 저장소 생성
+
+>git init 
+ㅎ
+4. 현재 저장소의 상태 알아보기
+
+>git status
+
+5. 변경 사항을 staging area (Index) 에 올리기
+
+>git add .
+
+ 6. staging area 에 있는 내용을 commit 하기 
+   (변경 사항의 snap shot 이 있는 staging area 의 내용을 local 저장소에 snap shot 으로 저장하기 )
+
+>git commit -m "commit 메세지"
+
+7. 새로운 branch 만들기
+
+>git branch 브랜치명
+
+8. branch 목록 보기
+
+>git branch
+
+9. branch 이동
+
+>git checkout 브랜치명
+
+10. branch 합치기(merge)
+브랜치를 합치고 싶은 브랜치로 checkout 한 다음 합칠 브랜치를 merge 한다.  
+
+>git merge 브랜치명 
+
+- 합칠때 충돌이 나면 자동 merge 가 안된다.
+- 충돌나면 충돌을 해결후  다시  add , commit 을 하면 merge 완성된다. 
+
+
+11. branch 삭제
+
+>git branch -d 브랜치명 
+
+12. 커서(HEAD) 를 이전 commit 으로 이동하기 ( ~ 갯수만큼 뒤로 간다. )
+
+>git  checkout  HEAD~
+
+13. commit 취소 하기
+
+옵션 : --hard , --soft , --mixed
+
+--hard : working dir, staging area, commit 모두 취소
+--soft : commit 취소
+--mixed: staging area, commit 취소
+
+
+>git reset 옵션 HEAD~
+
+14. 작업하던 내용 임시 저장 및 관리
+
+- 추적되지 않는 파일을 제외하고 변경사항 저장
+>git  stash  save
+
+- 추적되지 않는 파일도 포함해서 변경사항 저장
+>git  stash  save  -u
+
+- 저장된 변경사항을 지우면서 적용 시키기
+>git  stash  pop 
+
+
+- 저장된 변경사항을 유지하면서 적용 시키기
+>git  stash  apply  [ stash id ]
+
+- 저장된 변경사항을 삭제하기
+>git  stash  drop  [ stash id ]
+
+- 저장된 변경사항 목록 보기 
+>git  stash  list
+
+15.  unstaged change 를 모두 삭제하기
+>git  checkout  .
+
+16. untracked file 과 directory 를 모두 삭제하기
+
+>git  clean  -fd

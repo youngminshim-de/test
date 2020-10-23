@@ -150,7 +150,7 @@ ORIG_HEAD : reset 바로 직전의 HEAD 가 가리키던 commit
 
 >git merge origin/master
 
-26. fetch 와 merge 를 한번에 하기
+26. fetch 와 merge 를 한번에 하기 (fetch + merge = pull)
 
 >git pull origin
 

@@ -57,12 +57,14 @@ ex) master로 checkout 한다음 merge 한다.
 >git  checkout  HEAD~
 
 13. commit 취소 하기
-
+git reset
 옵션 : --hard , --soft , --mixed
 
 --soft : commit 취소
 --mixed: staging area, commit 취소
 --hard : working dir, staging area, commit 모두 취소
+--merge 주소 : merge 취소
+git reflog를 통해 merge전에 head@{n} 주소를 알아낸뒤 merge 취소
 
 
 >git reset 옵션 HEAD~

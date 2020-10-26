@@ -111,7 +111,16 @@ ORIG_HEAD : reset 바로 직전의 HEAD 가 가리키던 commit
 >git reset
 
 19. 최근 commit 을 취소하는 commit 
+    (특정 commit 전체를 없애주는 역할 revert)
+    - reset --hard 와 비슷하게 수정내용이 다 날아가지만 방식이 다름
+      reset은 이전 commit으로 되돌아감 // revert는 새로운 commit이 생성
+    - push 해놓고는 reset을 쓰면 안되므로, 새로운 commit을 만들어 수정하면 된다.
+      하지만 수정내용이 너무 많을 경우, revert를 사용한다. (되돌리는 commit)
 
+      Editor가 열린다. 
+      i : insert mode (text 작성, 즉 commit message 작성)
+      esc : 명령 mode (저장, 빠져나오기)
+      명령 MODE 에서 :WQ (Wrting and quit) -> 저장하고 빠져나오기
 >git revert HEAD
 
 20. remote 저장소 목록 보기

@@ -41,6 +41,10 @@ http://git-scm.com/
 ex) master로 checkout 한다음 merge 한다.
 > git checkout master
 > git merge 브랜치명    
+> git merge --abort
+(merge를 했는데 충돌이 날경우 수정하지않고 merge 취소할수있다.
+ 즉, add -> commit 전에 abort 해버리는것)
+
 
 >git merge 브랜치명 
 - master & branch (기존파일과 branch파일) 둘다 수정할 경우

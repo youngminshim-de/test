@@ -143,6 +143,9 @@ ORIG_HEAD : reset 바로 직전의 HEAD 가 가리키던 commit
 예)
 >git push -u origin master
 
+여기서 -u upstream을 의미한다. 저장소를 지정해놓으면 
+git push 브랜치명 만 입력해도 저장이 된다.
+
 23. remote 저장소 복사하기
 
 >git clone  저장소주소 
